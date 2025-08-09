@@ -28,7 +28,7 @@ jobs:
                     pnpx prisma generate
                     cd ../..
                     pnpm run build
-                    ls
+                    pnpm run start
 
 
 
