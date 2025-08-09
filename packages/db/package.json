@@ -5,7 +5,7 @@
   "exports": {
     "./client": "./dist/index.js"
   },
-  "keywords": [],
+  "keywords": [], 
   "author": "",
   "devDependencies": {
     "@repo/typescript-config": "workspace:*"
