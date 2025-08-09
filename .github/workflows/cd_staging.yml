@@ -30,7 +30,7 @@ jobs:
                     cd ../..
                     pnpm install
                     pnpm run build
-                    pnpm run dev
+                    pm2 start pnpm --name monorepo-cicd -- start
 
 
 
