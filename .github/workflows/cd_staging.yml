@@ -6,7 +6,7 @@ on:
 
 jobs:
     redeploy_frontend:
-        runs_on: ubuntu-latest
+        runs_on: ubuntu-@latest
         name: Deploy frontend to staging
         steps:
             run: |
