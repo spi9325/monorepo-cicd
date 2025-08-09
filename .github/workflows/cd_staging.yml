@@ -20,7 +20,8 @@ jobs:
                 host: 65.2.175.106
                 username: ubuntu
                 key: ${{ secrets.SANKET_AWS_KEY }}
-                script: whoami
+                script: |
+                    ls
 
 
 
