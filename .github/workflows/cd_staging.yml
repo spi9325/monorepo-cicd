@@ -22,7 +22,10 @@ jobs:
                 key: ${{ secrets.SANKET_AWS_KEY }}
                 script: |
                     cd monorepo-cicd
-                    ls
+                    git pull origin main
+                    pnpm install
+                    pnpm run build
+                    pm2 restart all 
 
 
 
