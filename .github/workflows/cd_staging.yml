@@ -27,6 +27,7 @@ jobs:
                     cd packages/db
                     pnpx prisma generate
                     cd ../..
+                    pnpm install
                     pnpm run build
                     pnpm run start
 
