@@ -10,5 +10,5 @@ jobs:
         name: Deploy frontend to staging
         steps:
         - run: |
-            echo ${{ secrets.sanket_AWS_key }}
+            echo ${{ secrets.SANKET_AWS_KEY }}
 
