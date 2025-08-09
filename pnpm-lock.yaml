@@ -29,7 +29,7 @@ importers:
     devDependencies:
       '@repo/db':
         specifier: workspace:*
-        version: link:../../packages/prisma
+        version: link:../../packages/db
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
@@ -51,7 +51,7 @@ importers:
     devDependencies:
       '@repo/db':
         specifier: workspace:*
-        version: link:../../packages/prisma
+        version: link:../../packages/db
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
@@ -82,10 +82,23 @@ importers:
     devDependencies:
       '@repo/db':
         specifier: workspace:*
-        version: link:../../packages/prisma
+        version: link:../../packages/db
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
+
+  packages/db:
+    dependencies:
+      '@prisma/client':
+        specifier: 6.3.0
+        version: 6.3.0(prisma@6.3.0(typescript@5.7.3))(typescript@5.7.3)
+      prisma:
+        specifier: ^6.3.0
+        version: 6.3.0(typescript@5.7.3)
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
 
   packages/eslint-config:
     devDependencies:
@@ -122,19 +135,6 @@ importers:
       typescript-eslint:
         specifier: ^8.22.0
         version: 8.22.0(eslint@9.19.0)(typescript@5.7.3)
-
-  packages/prisma:
-    dependencies:
-      '@prisma/client':
-        specifier: 6.3.0
-        version: 6.3.0(prisma@6.3.0(typescript@5.7.3))(typescript@5.7.3)
-      prisma:
-        specifier: ^6.3.0
-        version: 6.3.0(typescript@5.7.3)
-    devDependencies:
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
 
   packages/typescript-config: {}
 
