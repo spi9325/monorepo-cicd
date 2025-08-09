@@ -5,10 +5,26 @@ on:
             - "main"
 
 jobs:
-    redeploy_frontend:
+    deploy:
+        name: Push to EC2
         runs-on: ubuntu-latest
-        name: Deploy frontend to staging
+        
+
         steps:
-        - run: |
-            echo ${{ secrets.sanket_AWS_key }}
+          - name: Checkout repo
+            uses: actions/checkout@v4
+
+          - name: Connect & Pull on EC2
+            uses: appleboy/ssh-action@v1.0.3
+            with:
+                host: 65.2.175.106
+                username: ubuntu
+                key: ${{ secrets.SANKET_AWS_KEY }}
+                script: whoami
+
+
+
+
+        
+           
 
