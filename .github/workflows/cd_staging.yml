@@ -6,9 +6,9 @@ on:
 
 jobs:
     redeploy_frontend:
-        runs_on: ubuntu-@latest
+        runs-on: ubuntu-latest
         name: Deploy frontend to staging
         steps:
-            run: |
-            echo ${{secrets.sanket_AWS_key}}
+        - run: |
+            echo ${{ secrets.sanket_AWS_key }}
 
