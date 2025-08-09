@@ -24,8 +24,8 @@ jobs:
                     cd monorepo-cicd
                     git pull origin main
                     pnpm install
-                    pnpm run build
-                    pm2 restart all 
+                    cd packages/db
+                    ls
 
 
 
